@@ -4,7 +4,6 @@ import { AppProvider } from './store/AppContext'
 import { AppShell } from './components/AppShell'
 import { ConsultationPage } from './pages/ConsultationPage'
 import { DashboardPage } from './pages/DashboardPage'
-import { HomePage } from './pages/HomePage'
 import { PlanPage } from './pages/PlanPage'
 import { PurchasePage } from './pages/PurchasePage'
 import { RefillPage } from './pages/RefillPage'
@@ -17,7 +16,7 @@ function App() {
     <AppProvider>
       <AppShell>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<ReminderPage />} />
           <Route path="/consultation" element={<ConsultationPage />} />
           <Route path="/plan" element={<PlanPage />} />
           <Route path="/purchase" element={<PurchasePage />} />

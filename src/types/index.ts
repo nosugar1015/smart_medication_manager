@@ -67,7 +67,20 @@ export interface ReminderTask {
 export interface GrowthState {
   points: number
   streakDays: number
-  stage: '萌芽' | '生长' | '含苞' | '开花'
+  stage: '待提升' | '执行中' | '稳定期' | '依从良好'
+}
+
+export interface GrowthTreeState {
+  stageName: string
+  stageDescription: string
+  treeSymbol: string
+  nextStageName: string | null
+  nextStagePoints: number | null
+  remainingPoints: number
+  progressPercent: number
+  encouragement: string
+  todayTip: string
+  ruleSummary: string[]
 }
 
 export interface AppState {

@@ -1,9 +1,9 @@
 import type { AppState, ConsultationMode, MedicationItem, ReminderTask, WarningLevel } from '../types'
 
 export const encouragements = [
-  '坚持用药，身体会越来越稳。',
-  '今天也在认真照顾自己，继续加油。',
-  '按时服药一步步，健康就会更靠近。',
+  '请按处方完成本次服药确认。',
+  '建议在服药后及时记录本次执行情况。',
+  '如已服用，请尽快完成本次用药确认。',
 ]
 
 export const defaultReminderPreset = {
@@ -51,7 +51,7 @@ export const createPlanByDisease = (diseaseType: string): MedicationItem[] => {
         id: 'med-1',
         name: '二甲双胍片',
         genericName: 'Metformin',
-        image: '💊',
+        image: 'Rx',
         dose: '1片 / 0.5g',
         frequencyPerDay: 2,
         timing: '饭后',
@@ -63,7 +63,7 @@ export const createPlanByDisease = (diseaseType: string): MedicationItem[] => {
         id: 'med-2',
         name: '阿卡波糖片',
         genericName: 'Acarbose',
-        image: '🧃',
+        image: 'PO',
         dose: '1片 / 50mg',
         frequencyPerDay: 3,
         timing: '饭前',
@@ -79,7 +79,7 @@ export const createPlanByDisease = (diseaseType: string): MedicationItem[] => {
       id: 'med-1',
       name: '氨氯地平片',
       genericName: 'Amlodipine',
-      image: '💊',
+      image: 'Rx',
       dose: '1片 / 5mg',
       frequencyPerDay: 1,
       timing: '饭后',
@@ -91,7 +91,7 @@ export const createPlanByDisease = (diseaseType: string): MedicationItem[] => {
       id: 'med-2',
       name: '缬沙坦胶囊',
       genericName: 'Valsartan',
-      image: '🩺',
+      image: 'CAP',
       dose: '1粒 / 80mg',
       frequencyPerDay: 1,
       timing: '饭前',
@@ -129,6 +129,6 @@ export const initialState: AppState = {
   growth: {
     points: 72,
     streakDays: 6,
-    stage: '含苞',
+    stage: '稳定期',
   },
 }
